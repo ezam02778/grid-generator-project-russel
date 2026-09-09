@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+>
+
+<meta name="theme-color" content="#050607">
+
+<title>GRID GENERATOR 3D</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="app">
+
+<header class="header">
+
+    <div class="brand">
+
+        <span class="status"></span>
+
+        GRID GENERATOR
+
+    </div>
+
+
+    <button
+        id="uploadButton"
+        class="upload"
+    >
+        Upload
+    </button>
+
+
+    <input
+        id="imageInput"
+        type="file"
+        accept="image/*"
+        hidden
+    >
+
+</header>
+
+
+<main>
+
+<section class="preview">
+
+    <div
+        id="grid"
+        class="grid"
+    >
+
+        <div class="welcome">
+
+            <div class="plus">+</div>
+
+            <h2>
+                3D FACE GRID
+            </h2>
+
+            <p>
+                Upload one portrait
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="panel">
+
+    <div class="panel-title">
+
+        <span>
+            <i></i>
+            GRID GENERATOR
+        </span>
+
+        <small>3D</small>
+
+    </div>
+
+
+    <div class="control">
+
+        <label>
+            <span>Columns</span>
+            <b id="columnsValue">4</b>
+        </label>
+
+        <input
+            id="columns"
+            type="range"
+            min="1"
+            max="8"
+            value="4"
+        >
+
+    </div>
+
+
+    <div class="control">
+
+        <label>
+            <span>Rows</span>
+            <b id="rowsValue">6</b>
+        </label>
+
+        <input
+            id="rows"
+            type="range"
+            min="1"
+            max="10"
+            value="6"
+        >
+
+    </div>
+
+
+    <div class="control">
+
+        <label>
+            <span>3D Depth</span>
+            <b id="depthValue">35</b>
+        </label>
+
+        <input
+            id="depth"
+            type="range"
+            min="0"
+            max="100"
+            value="35"
+        >
+
+    </div>
+
+
+    <div class="control">
+
+        <label>
+            <span>Perspective</span>
+            <b id="perspectiveValue">30</b>
+        </label>
+
+        <input
+            id="perspective"
+            type="range"
+            min="0"
+            max="70"
+            value="30"
+        >
+
+    </div>
+
+
+    <div class="control">
+
+        <label>
+            <span>Gap</span>
+            <b id="gapValue">15</b>
+        </label>
+
+        <input
+            id="gap"
+            type="range"
+            min="0"
+            max="40"
+            value="15"
+        >
+
+    </div>
+
+
+    <div class="control">
+
+        <label>
+            <span>Face Scale</span>
+            <b id="scaleValue">95</b>
+        </label>
+
+        <input
+            id="scale"
+            type="range"
+            min="60"
+            max="120"
+            value="95"
+        >
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button id="randomButton">
+            Randomize
+        </button>
+
+        <button
+            id="downloadButton"
+            class="export"
+        >
+            Export PNG
+        </button>
+
+    </div>
+
+
+    <div class="info">
+
+        <strong>3D MODE</strong>
+
+        <p>
+            The portrait is converted into a
+            depth-based 3D relief and repeated
+            across the grid.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+</div>
+
+
+<!-- THREE.JS -->
+
+<script type="importmap">
+{
+    "imports": {
+        "three":
+        "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
+
+        "three/addons/":
+        "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
+    }
+}
+</script>
+
+
+<script
+    type="module"
+    src="app.js"
+></script>
+
+
+</body>
+
+</html>
